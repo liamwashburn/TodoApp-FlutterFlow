@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User",
+  "description": "Defines user profile data stored in the Firestore users collection",
+  "type": "object",
+  "properties": {
+    "birthdate": {
+      "description": "Date of birth for the user account",
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_time": {
+      "description": "Timestamp when the user profile was created",
+      "type": "string",
+      "format": "date-time"
+    },
+    "display_name": {
+      "description": "Name displayed within the task application",
+      "type": "string"
+    },
+    "email": {
+      "description": "Registered email address for authentication",
+      "type": "string",
+      "format": "email"
+    },
+    "photo_url": {
+      "description": "Link to the user's avatar image stored in Firebase Storage",
+      "type": "string",
+      "format": "uri"
+    },
+    "uid": {
+      "description": "Unique Firebase Authentication user identifier",
+      "type": "string"
+    }
+  },
+  "required": [
+    "created_time",
+    "display_name",
+    "email",
+    "uid"
+  ]
+}
